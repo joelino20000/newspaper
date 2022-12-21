@@ -1,0 +1,34 @@
+<!--templates/home.html-->
+{% load static %}
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content  %}
+    {% if user.is_authenticated %}
+    <ul class="nav justify-content-center">
+        <li class="nav-item col-1">
+            <a class="btn btn-outline-info" href="{% url 'logout' %}">Logout</a>
+        </li>
+
+        <li class="nav-item col-1">
+            <a class="btn btn-outline-info" href="{% url 'article_new' %}">+ New</a>
+        </li>
+        <li class="nav-item col-1">
+            <a class="btn btn-outline-info" href="{% url 'article_list'%}">articles</a>
+        </li>
+
+    </ul>
+    {%else%}
+    <p>Usuario no ha iniciado sesión.</p>
+    <ul class="nav justify-content-center">
+        <li class="nav-item col-1">
+            <a class="btn btn-outline-info" href="{% url 'login' %}">Login</a>
+        </li>
+        <li class="nav-item col-1">
+            <a class="btn btn-outline-info" href="{% url 'singup' %}">Sing up</a>
+        </li>
+    </ul>
+    {% endif %}
+
+{% endblock content  %}

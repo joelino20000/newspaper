@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card">
+  <div  class="card-error" >
+    <h5 class="card-title text-center">No tienes permisos</h5>
+    <a href="{% url 'article_list'%}" class="btn btn-warning">Volver al inicio</a>
+  </div>
+</div>
+{% endblock content %}
