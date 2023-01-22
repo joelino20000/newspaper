@@ -6,4 +6,4 @@ Autor Joel Bautista
 
 #3 Esta pagina posse un formulario que consta de login,sing up, reset password, comment, add articles, error 403 ademas de esto todos los formularios son proporcionados por Django
 
-#4 Requerimientos necesarios para la ejecucion correcta 
+#4 Requerimientos necesarios para la ejecucion correcta en el archivo pyvenv.cfg
